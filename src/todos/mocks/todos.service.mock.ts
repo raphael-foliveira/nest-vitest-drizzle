@@ -3,7 +3,7 @@ import { TodosService } from '../todos.service';
 
 vi.mock('../todos.service', () => ({
   TodosService: vi.fn(() => ({
-    findAll: vi.fn(() => []),
+    findAll: vi.fn(),
     findOne: vi.fn(),
     create: vi.fn(),
     update: vi.fn(),

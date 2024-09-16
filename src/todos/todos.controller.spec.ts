@@ -11,12 +11,7 @@ describe('TodosController', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [TodosController],
-      providers: [
-        {
-          provide: TodosService,
-          useClass: TodosServiceMock,
-        },
-      ],
+      providers: [{ provide: TodosService, useClass: TodosServiceMock }],
     }).compile();
 
     todosService = module.get(TodosService);
